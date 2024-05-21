@@ -1,0 +1,44 @@
+.container {
+    margin: 60px auto;
+    max-width: 1200px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input, .button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.button:active {
+    background-color: #777;
+}
+
+.info {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

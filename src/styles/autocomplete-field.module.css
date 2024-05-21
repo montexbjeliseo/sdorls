@@ -1,0 +1,16 @@
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+
+.autocomplete {
+    display: block;
+    width: 200px;  /* Ajusta este valor según tus necesidades */
+    resize: none;
+    height: 32px;
+    font-size: 16px;
+    max-lines: 1;
+    overflow: hidden;
+    padding: 8px 12px;
+}
