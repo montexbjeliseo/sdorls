@@ -2,3 +2,29 @@
     max-width: 1200px;
     margin: 60px auto;
 }
+
+.referenceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.referenceList li {
+    padding: 5px 0px;
+}
+
+.referenceList li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.referenceList li a:hover {
+    background-color: #ccc;
+}
