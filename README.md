@@ -15,4 +15,11 @@ npm run dev
 
 ```
 
-Visualiza en http://localhost:5713
+Visualiza en http://localhost:5173
+
+## Librerias y herramientas
+- React + Vite
+- TanStack react table
+- React Router
+- React Hook Form
+- React-autocomplete-input
