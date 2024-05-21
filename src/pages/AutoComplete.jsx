@@ -2,8 +2,9 @@ import TextInput from "react-autocomplete-input";
 import 'react-autocomplete-input/dist/bundle.css';
 import LOCATIONS from "@/assets/LOCATIONS.json";
 import style from "@/styles/autocomplete-field.module.css";
+import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
-export const SearchAutoCompletePage = () => {
+export function Component() {
 
     return (
         <div className={style.container}>
@@ -13,3 +14,14 @@ export const SearchAutoCompletePage = () => {
         </div>
     )
 }
+
+export function ErrorBoundary() {
+    let error = useRouteError();
+    return isRouteErrorResponse(error) ? (
+      <h1>
+        {error.status} {error.statusText}
+      </h1>
+    ) : (
+      <h1>{error.message || error}</h1>
+    );
+  }
