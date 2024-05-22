@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { fetchUsers } from "@/api/user-api";
 import { Table } from "@/features/ui/Table";
-// import { useLocation } from "react-router-dom";
 
 export const ManualPaginationTablePage = () => {
   const [pagination, setPagination] = useState({
@@ -50,28 +49,29 @@ export const ManualPaginationTablePage = () => {
     setLoading(true);
 
     const fetchData = async () => {
-      setLoading(false);
-
       const data = await fetchUsers(pagination);
-
+      setLoading(false);
       setData(data);
     };
 
     fetchData();
-
   }, [pagination]);
 
   return (
     <div>
       <h1>Manual Pagination Table</h1>
-      <Table
-        data={data.results}
-        columns={columns}
-        loading={loading}
-        pagination={pagination}
-        onPaginationChange={setPagination}
-        pageCount={data.pageCount ?? 1}
-      />
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <Table
+          data={data.results}
+          columns={columns}
+          loading={loading}
+          pagination={pagination}
+          onPaginationChange={setPagination}
+          pageCount={data.pageCount ?? 1}
+        />
+      )}
     </div>
   );
 };
