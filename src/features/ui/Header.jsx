@@ -9,6 +9,7 @@ export const Header = () => {
                 <Link className={style.navlink} to="/table">Table</Link>
                 <Link className={style.navlink} to="/forms">Forms</Link>
                 <Link className={style.navlink} to="/search-auto-complete">Search Auto Complete</Link>
+                <Link className={style.navlink} to="/manual-pagination-table">Manual Pagination Table</Link>
             </nav>
         </header>
     )
